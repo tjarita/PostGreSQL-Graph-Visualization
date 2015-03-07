@@ -1,0 +1,27 @@
+Arita, Toshiki
+Had plans to work with a group but they finished most of it without letting me know.
+
+I implemented the GDT-PSV variation in my project.
+
+Inputs are schema.sql which is a renamed Modial schema. Small change made which was deleting newline characters after "REFERENCES". Does not change schema at all just formatting.
+
+I used a simple Makefile for building. Simply type the usual "Make" command. 
+
+My program runs on the CSIF machines and any IDE using Cygwin's g++ compiler.
+
+Running is done by : 
+1. psv <schema file>
+2. This will overwrite any files named "view.dot" before it.
+3. Run view.dot in graphviz.
+
+
+Quick definition of input files : 
+schema.sql : Complete Mondial schema
+schema1.sql : Short schema with Country,City,Province showing how alter table works for adding foreign keys.
+
+General summary would be that the program is not an object oriented program.
+My C++ skills are rusty from not being using in a while so I made a messier but working implementation.
+All nodes/attributes/foreign keys have their own label in order to not have conflicts.
+The program takes 1 pass at the schema file and populates all entities & attributes. It also detects primary keys and assigns them a bold font.
+The 2nd pass is for populating foreign keys and also primary keys who are foreign keys. This was done because I was not using any objects and deleting edges nor redefining, to my knowledge, are  possible in DOT.
+I double checked my schema by using the mondial-abh.pdf file for referential integrity.

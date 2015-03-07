@@ -1,0 +1,54 @@
+digraph { 
+ rankdir = BT 
+ Country[shape="box3d" style="filled" color="#0000FF" fillcolor="#EEEEEE" fontname="Courier"] 
+Country_Name [label="Name "shape="box" style="rounded"width=0 height=0 color="#00AA00"]
+Country->Country_Name [dir="none"]
+Country_Code [label="Code "shape="box" style="rounded"width=0 height=0 color="#00AA00"fontname="Courier-Bold"]
+Country->Country_Code [dir="none"]
+Country_Capital [label="Capital "shape="box" style="rounded"width=0 height=0 color="#00AA00"]
+Country->Country_Capital [dir="none"]
+Country_Province [label="Province "shape="box" style="rounded"width=0 height=0 color="#00AA00"]
+Country->Country_Province [dir="none"]
+Country_Area [label="Area "shape="box" style="rounded"width=0 height=0 color="#00AA00"]
+Country->Country_Area [dir="none"]
+Country_Population [label="Population "shape="box" style="rounded"width=0 height=0 color="#00AA00"]
+Country->Country_Population [dir="none"]
+City[shape="box3d" style="filled" color="#0000FF" fillcolor="#EEEEEE" fontname="Courier"] 
+City_Name [label="Name "shape="box" style="rounded"width=0 height=0 color="#00AA00"]
+City->City_Name [dir="none"]
+City_Country [label="Country "shape="box" style="rounded"width=0 height=0 color="#00AA00"]
+City->City_Country [dir="none"]
+City_Province [label="Province "shape="box" style="rounded"width=0 height=0 color="#00AA00"]
+City->City_Province [dir="none"]
+City_Population [label="Population "shape="box" style="rounded"width=0 height=0 color="#00AA00"]
+City->City_Population [dir="none"]
+City_Longitude [label="Longitude "shape="box" style="rounded"width=0 height=0 color="#00AA00"]
+City->City_Longitude [dir="none"]
+City_Latitude [label="Latitude "shape="box" style="rounded"width=0 height=0 color="#00AA00"]
+City->City_Latitude [dir="none"]
+City_Name[label="Name"shape="box" style="rounded"width=0 height=0 color="#00AA00"fontname="Courier-Bold"]
+Province[shape="box3d" style="filled" color="#0000FF" fillcolor="#EEEEEE" fontname="Courier"] 
+Province_Name [label="Name "shape="box" style="rounded"width=0 height=0 color="#00AA00"]
+Province->Province_Name [dir="none"]
+Province_Country  [label="Country  "shape="box" style="rounded"width=0 height=0 color="#00AA00"]
+Province->Province_Country  [dir="none"]
+Province_Population [label="Population "shape="box" style="rounded"width=0 height=0 color="#00AA00"]
+Province->Province_Population [dir="none"]
+Province_Area [label="Area "shape="box" style="rounded"width=0 height=0 color="#00AA00"]
+Province->Province_Area [dir="none"]
+Province_Capital [label="Capital "shape="box" style="rounded"width=0 height=0 color="#00AA00"]
+Province->Province_Capital [dir="none"]
+Province_CapProv [label="CapProv "shape="box" style="rounded"width=0 height=0 color="#00AA00"]
+Province->Province_CapProv [dir="none"]
+Province_Name[label="Name"shape="box" style="rounded"width=0 height=0 color="#00AA00"fontname="Courier-Bold"]
+Province_Country  [label="Country  "shape="box" style="rounded"width=0 height=0 color="#0000FF"]
+Province_Country  ->Country [color=red dir=foward style=dashed label=" FK" fontname="Verdana" fontcolor=red fontsize=10]
+Country_Capital->City_Name[color=red dir=foward style=dashed label=" FK" fontname="Verdana" fontcolor=red fontsize=10]
+Country_Code->City_Country[color=red dir=foward style=dashed label=" FK" fontname="Verdana" fontcolor=red fontsize=10]
+Country_Province->City_Province[color=red dir=foward style=dashed label=" FK" fontname="Verdana" fontcolor=red fontsize=10]
+City_Province->Province_Name[color=red dir=foward style=dashed label=" FK" fontname="Verdana" fontcolor=red fontsize=10]
+City_Country->Province_Country[color=red dir=foward style=dashed label=" FK" fontname="Verdana" fontcolor=red fontsize=10]
+Province_Capital->City_Name[color=red dir=foward style=dashed label=" FK" fontname="Verdana" fontcolor=red fontsize=10]
+Province_Country->City_Country[color=red dir=foward style=dashed label=" FK" fontname="Verdana" fontcolor=red fontsize=10]
+Province_CapProv->City_Province[color=red dir=foward style=dashed label=" FK" fontname="Verdana" fontcolor=red fontsize=10]
+}
